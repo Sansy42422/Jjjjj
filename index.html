@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bomb Runner Quest</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <canvas id="gameCanvas"></canvas>
+        <div id="ui-overlay">
+            <div id="stats">
+                <p>Health: <span id="health">100</span></p>
+                <p>Score: <span id="score">0</span></p>
+                <p>Bombs: <span id="bombs">5</span></p>
+            </div>
+            <div id="quest-log">
+                <h3>Current Quest:</h3>
+                <p id="quest-title">No Quest Active</p>
+                <p id="quest-description"></p>
+                <ul id="quest-objectives"></ul>
+            </div>
+            <div id="controls-info">
+                <p>Controls: Arrow Keys to Move, Space to Shoot Bomb</p>
+            </div>
+        </div>
+    </div>
+    <div id="game-over-screen" style="display:none;">
+        <h1>Game Over!</h1>
+        <p>Final Score: <span id="final-score">0</span></p>
+        <button onclick="restartGame()">Play Again?</button>
+    </div>
+    <div id="victory-screen" style="display:none;">
+        <h1>Congratulations!</h1>
+        <p>All Quests Completed!</p>
+        <p>Final Score: <span id="final-victory-score">0</span></p>
+        <button onclick="restartGame()">Play Again?</button>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
